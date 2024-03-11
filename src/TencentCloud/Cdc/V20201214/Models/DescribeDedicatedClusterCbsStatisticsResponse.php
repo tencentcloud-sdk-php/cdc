@@ -18,24 +18,30 @@ namespace TencentCloud\Cdc\V20201214\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDedicatedClusters返回参数结构体
+ * DescribeDedicatedClusterCbsStatistics返回参数结构体
  *
- * @method array getDedicatedClusterSet() 获取符合查询条件的专用集群列表
- * @method void setDedicatedClusterSet(array $DedicatedClusterSet) 设置符合查询条件的专用集群列表
- * @method integer getTotalCount() 获取符合条件的专用集群数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的专用集群数量。
+ * @method array getSetList() 获取云硬盘仓库信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSetList(array $SetList) 设置云硬盘仓库信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置总数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDedicatedClustersResponse extends AbstractModel
+class DescribeDedicatedClusterCbsStatisticsResponse extends AbstractModel
 {
     /**
-     * @var array 符合查询条件的专用集群列表
+     * @var array 云硬盘仓库信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DedicatedClusterSet;
+    public $SetList;
 
     /**
-     * @var integer 符合条件的专用集群数量。
+     * @var integer 总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -45,8 +51,10 @@ class DescribeDedicatedClustersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DedicatedClusterSet 符合查询条件的专用集群列表
-     * @param integer $TotalCount 符合条件的专用集群数量。
+     * @param array $SetList 云硬盘仓库信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 总数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +70,12 @@ class DescribeDedicatedClustersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DedicatedClusterSet",$param) and $param["DedicatedClusterSet"] !== null) {
-            $this->DedicatedClusterSet = [];
-            foreach ($param["DedicatedClusterSet"] as $key => $value){
-                $obj = new DedicatedCluster();
+        if (array_key_exists("SetList",$param) and $param["SetList"] !== null) {
+            $this->SetList = [];
+            foreach ($param["SetList"] as $key => $value){
+                $obj = new SetInfo();
                 $obj->deserialize($value);
-                array_push($this->DedicatedClusterSet, $obj);
+                array_push($this->SetList, $obj);
             }
         }
 
