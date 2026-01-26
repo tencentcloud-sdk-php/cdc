@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDedicatedSupportedZones请求参数结构体
  *
- * @method array getRegions() 获取传入region列表
- * @method void setRegions(array $Regions) 设置传入region列表
+ * @method array getRegions() 获取<p>传入region列表</p>
+ * @method void setRegions(array $Regions) 设置<p>传入region列表</p>
  */
 class DescribeDedicatedSupportedZonesRequest extends AbstractModel
 {
     /**
-     * @var array 传入region列表
+     * @var array <p>传入region列表</p>
      */
     public $Regions;
 
     /**
-     * @param array $Regions 传入region列表
+     * @param array $Regions <p>传入region列表</p>
      */
     function __construct()
     {
